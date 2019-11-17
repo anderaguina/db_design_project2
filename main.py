@@ -1,35 +1,38 @@
 from menu import main_menu
-from select_entries import select_rows, insert_rows
+from select_entries import select_rows
+from inserts import insert_rows
+from updates import update_row
 
 if __name__ == "__main__":
-    choice, choice1, data = main_menu()
+    response = main_menu()
 
     # Depending on the option selected in the main menu and the type of table the user wants
     # to interact with, call different functions
-    while choice != 'q':
-        print(f"Choice = {choice}")
-        print(f"Choice1 = {choice1}")
+    print(f"Choice = {response}")
+    while response["choice"] != 'q':
+        print(f"Choice = {response['choice']}")
+        print(f"Choice1 = {response['choice1']}")
         # Case select
-        if choice == '1':
-            if choice1 != 'b':            
-                results = select_rows(choice1)
+        if response['choice'] == '1':
+            if response['choice1'] != 'b':            
+                results = select_rows(response['choice1'])
                 for result in results:
                     print(result)
 
-            choice, choice1, data = main_menu()
-        elif choice == '2':
-            if choice1 != 'b':
-                insert_rows(choice1, data)
-            choice, choice1, data = main_menu()
-            
-        elif choice == '3':
-            choice, choice1, data = main_menu()
-        elif choice == '4':
-            choice, choice1, data = main_menu()
-        elif choice == '5':
-            choice, choice1, data = main_menu()
-        elif choice == 'q':
+            response = main_menu()
+        elif response['choice'] == '2':
+            if response['choice1'] != 'b':
+                insert_rows(response['choice1'], response['data'])
+            response = main_menu()            
+        elif response['choice'] == '3':
+            update_row(response)
+            response = main_menu()
+        elif response['choice'] == '4':
+            response = main_menu()
+        elif response['choice'] == '5':
+            response = main_menu()
+        elif response['choice'] == 'q':
             print("\nGoodbye.")
         else:
             print("\nI don't understand that choice, please try again.\n")
-            choices = main_menu()
+            response = main_menu()
