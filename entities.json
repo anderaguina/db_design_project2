@@ -1,0 +1,44 @@
+{
+    "troop": {
+        "troop_name(unique_id)": "string",
+        "troop_address": "string",
+        "troop_website_url": "string",
+        "troop_telephone_number": "string"
+    },
+    "section": {
+        "section_name(unique_id)": "string",
+        "section_type": "string",
+        "meeting_day": "string",
+        "meeting_start_time": "date",
+        "meeting_end_time": "date"
+    },
+    "youth_member": {
+        "member_id(unique_id)": "string",
+        "name": "string",
+        "address": "string",
+        "date_of_birth": "string",
+        "gender": "string",
+        "parent_guardian": "string",
+        "parent_guardian_phone_number": "string"
+    },
+    "adult_volunteer": {
+        "volunteer_id(unique_id": "string",
+        "name": "string",
+        "address" : "string",
+        "phone_number" : "string",
+        "date_of_birth" : "string",
+        "gender" : "string",
+        "vetted" : "boolean",
+        "vetting_completion_date" : "string"
+    },
+    "national_events" : {
+        "event_id(unique_id" : "string",
+        "event_name" : "string",
+        "detailed_info" : "string",
+        "start_date" : "string",
+        "end_date" : "string",
+        "location" : "string",
+        "cost" : "string",
+        "closing_date" : "string",
+    }
+}
