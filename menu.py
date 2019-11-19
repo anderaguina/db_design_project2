@@ -4,6 +4,7 @@ def main_menu():
     print("\n[1] LIST DATA")
     print("\n[2] INSERT DATA")
     print("\n[3] UPDATE DATA")
+    print("\n[4] DELETE DATA")
 
     
     
@@ -39,6 +40,15 @@ def main_menu():
             "choice1": choice1,
             "id_target": id_target,
             "data": data
+        }
+        return response
+    if choice == '4':
+        # sub_menu2()
+        choice1, id_target = delete_menu()
+        response = {
+            "choice": choice,
+            "choice1": choice1,
+            "id_target": id_target
         }
         return response
 
@@ -110,8 +120,25 @@ def update_menu():
 
     return choice, id_entry, data
 
+def delete_menu():
+    print("\n[1] TO DELETE TROOP")
+    print("\n[2] TO DELETE SECTION")
+    
+    print("[b] Enter b to go back to main menu.")
+
+    # Ask for the user's choice.
+    choice = input("\nWhat would you like to do? ")
+
+    if (choice != "1" and choice !="2"):
+        print("\nI don't understand that choice, please try again.\n")
+        delete_menu()
+
+    id_entry = request_target_entry()
+    
+    return choice, id_entry
+
 def request_target_entry():
-    id_entry = input("\nPlease enter id of the entry to be updated ")
+    id_entry = input("\nPlease enter id of the entry to be affected ")
     return id_entry
 
 

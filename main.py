@@ -2,6 +2,7 @@ from menu import main_menu
 from select_entries import select_rows
 from inserts import insert_rows
 from updates import update_row
+from deletes import delete_row
 
 if __name__ == "__main__":
     response = main_menu()
@@ -28,6 +29,7 @@ if __name__ == "__main__":
             update_row(response)
             response = main_menu()
         elif response['choice'] == '4':
+            delete_row(response)
             response = main_menu()
         elif response['choice'] == '5':
             response = main_menu()
