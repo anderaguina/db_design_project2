@@ -8,14 +8,17 @@ def select_rows(choice):
 
     # I know the potential of sql injection threats, this would need to be controlled
     if (choice == "3"):
-        troop = input("\nEnter name of troop please: ")
+        troop = input("\nEnter name of the troop please: ")
         sql = f'SELECT * FROM section WHERE troop_name = "{troop}";'
     elif (choice == "5"):
-        pass
+        troop = input("\nEnter name of the troop please: ")
+        sql = f'SELECT * FROM volunteer WHERE troop_name = "{troop}";'
     elif (choice == "7"):
-        pass
+        section = input("\nEnter name of the section please: ")
+        sql = f'SELECT * FROM member WHERE section_name = "{section}";'
     elif (choice == "9"):
-        pass
+        event = input("\nEnter id of the event please: ")
+        sql = f'SELECT * FROM member_attends_event WHERE event_id = "{event}";'
     else:
         sql = f'SELECT * FROM {table};'
 

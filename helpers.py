@@ -6,17 +6,19 @@ def translate_option_to_table(choice):
     elif choice == "2":
         table = "section"
     elif choice == "3":
-        table = "member"
+        table = "section"
     elif choice == "4":
         table = "volunteer"
     elif choice == "5":
-        table = "national_events"
+        table = "volunteer"
     elif choice == "6":
-        table = "section_type"
+        table = "member"
     elif choice == "7":
-        table = "member_attends_event"
+        table = "member"
     elif choice == "8":
-        table = "event_is_organized_for_section_type"
+        table = "national_events"
+    elif choice == "9":
+        table = "member"
 
 
     return table
