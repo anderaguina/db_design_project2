@@ -28,10 +28,54 @@ INSERT INTO section_type (code, descr)
 VALUES ("Adolescent", "This section type is specialized in age groups from 15 to 17 years");
 
 /* NATIONAL EVENTS */
+INSERT INTO national_events (event_id, event_name, detailed_info, event_start_date, event_end_date, event_location, event_cost, aplication_closing_date)
+VALUES ("0", "Event0", "This event is intended to learn the meaning of number 0", "2019-1-10", "2019-1-20", "CORK city hall", "0", "2019-1-01");
+
+INSERT INTO national_events (event_id, event_name, detailed_info, event_start_date, event_end_date, event_location, event_cost, aplication_closing_date)
+VALUES ("1", "Event1", "This event is intended to learn the meaning of number 1", "2019-1-10", "2019-1-20", "CORK city hall", "10", "2019-1-01");
+
+INSERT INTO national_events (event_id, event_name, detailed_info, event_start_date, event_end_date, event_location, event_cost, aplication_closing_date)
+VALUES ("2", "Event2", "This event is intended to learn the meaning of number 2", "2019-1-10", "2019-1-20", "CORK city hall", "20", "2019-1-01");
+
+INSERT INTO national_events (event_id, event_name, detailed_info, event_start_date, event_end_date, event_location, event_cost, aplication_closing_date)
+VALUES ("3", "Event3", "This event is intended to learn the meaning of number 3", "2019-1-10", "2019-1-20", "CORK city hall", "30", "2019-1-01");
+
+INSERT INTO national_events (event_id, event_name, detailed_info, event_start_date, event_end_date, event_location, event_cost, aplication_closing_date)
+VALUES ("4", "Event4", "This event is intended to learn the meaning of number 4", "2019-1-10", "2019-1-20", "CORK city hall", "40", "2019-1-01");
 
 /* MEMBER ATTENDS EVENT */
+INSERT INTO member_attends_event (member_id, event_id)
+VALUES ("member0", "0");
+
+INSERT INTO member_attends_event (member_id, event_id)
+VALUES ("member1", "1");
+
+INSERT INTO member_attends_event (member_id, event_id)
+VALUES ("member2", "2");
+
+INSERT INTO member_attends_event (member_id, event_id)
+VALUES ("member3", "3");
+
+INSERT INTO member_attends_event (member_id, event_id)
+VALUES ("member4", "4");
 
 /* EVENT IS ORGANIZED FOR SECTION TYPE */
+
+INSERT INTO event_is_organized_for_section_type (section_type_code, event_id)
+VALUES ("Junior", "0");
+
+INSERT INTO event_is_organized_for_section_type (section_type_code, event_id)
+VALUES ("Junior", "1");
+
+INSERT INTO event_is_organized_for_section_type (section_type_code, event_id)
+VALUES ("Pre-teen", "2");
+
+INSERT INTO event_is_organized_for_section_type (section_type_code, event_id)
+VALUES ("Teen", "3");
+
+INSERT INTO event_is_organized_for_section_type (section_type_code, event_id)
+VALUES ("Adolescent", "4");
+
 
 /* VOLUNTEER */
 
