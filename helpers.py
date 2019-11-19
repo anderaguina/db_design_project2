@@ -1,6 +1,5 @@
 
 def translate_option_to_table(choice):
-    print("SELECT 1")
     if choice == "1":
         table = "troop"
     elif choice == "2":

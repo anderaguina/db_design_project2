@@ -1,5 +1,5 @@
 def main_menu():
-
+    print("\n############## MAIN MENU ##############")
     # Give all the choices in a series of print statements.
     print("\n[1] LIST DATA")
     print("\n[2] INSERT DATA")
@@ -9,6 +9,8 @@ def main_menu():
     
     
     print("[q] Enter q to quit.")
+
+    print("\n#######################################")
 
     # Ask for the user's choice.
     choice = input("\nWhat would you like to do? ")
@@ -25,7 +27,7 @@ def main_menu():
     if choice == '2':
         # sub_menu2()
         choice1, data = insert_menu()
-        print(f"INSERT MENU: {choice}, {choice1}, {data}")
+
         response = {
             "choice": choice,
             "choice1": choice1,
@@ -64,6 +66,8 @@ def main_menu():
 
 
 def select_menu():
+    print("\n############## SELECT MENU ##############")
+
     print("\n[1] LIST ALL TROOPS")
     print("\n[2] LIST ALL SECTIONS")
     print("\n[3] LIST ALL SECTIONS OF A TROOP")
@@ -76,16 +80,22 @@ def select_menu():
     
     print("[b] Enter b to go back to main menu.")
 
+    print("\n#########################################")
+
     # Ask for the user's choice.
     choice = input("\nWhat would you like to do? ")
 
     return choice
 
 def insert_menu():
+    print("\n############## INSERT MENU ##############")
+
     print("\n[1] CREATE NEW TROOP")
     print("\n[2] CREATE NEW SECTION")
     
     print("[b] Enter b to go back to main menu.")
+
+    print("\n#########################################")
 
     # Ask for the user's choice.
     choice = input("\nWhat would you like to do? ")
@@ -95,17 +105,28 @@ def insert_menu():
     elif choice == '2':
         data = request_section_data()
         print("choice2")
+    elif choice == 'b':
+        return choice, "no data"
+    else:
+        print("\nI don't understand that choice, please try again.\n")
+        insert_menu()
 
     return choice, data
 
 def update_menu():
+    print("\n############## UPDATE MENU ##############")
+    
     print("\n[1] TO UPDATE TROOP")
     print("\n[2] TO UPDATE SECTION")
     
     print("[b] Enter b to go back to main menu.")
 
+    print("\n#########################################")
     # Ask for the user's choice.
     choice = input("\nWhat would you like to do? ")
+
+    if choice == 'b':
+        return choice, "no entry", "no data"
 
     id_entry = request_target_entry()
 
@@ -121,6 +142,8 @@ def update_menu():
     return choice, id_entry, data
 
 def delete_menu():
+    print("\n############## DELETE MENU ##############")
+
     print("\n[1] TO DELETE TROOP")
     print("\n[2] TO DELETE SECTION")
     
@@ -129,7 +152,10 @@ def delete_menu():
     # Ask for the user's choice.
     choice = input("\nWhat would you like to do? ")
 
-    if (choice != "1" and choice !="2"):
+    print("\n#########################################")
+    if choice == 'b':
+        return choice, "no entry"
+    elif (choice != "1" and choice !="2"):
         print("\nI don't understand that choice, please try again.\n")
         delete_menu()
 

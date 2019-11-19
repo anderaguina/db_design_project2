@@ -9,10 +9,7 @@ if __name__ == "__main__":
 
     # Depending on the option selected in the main menu and the type of table the user wants
     # to interact with, call different functions
-    print(f"Choice = {response}")
     while response["choice"] != 'q':
-        print(f"Choice = {response['choice']}")
-        print(f"Choice1 = {response['choice1']}")
         # Case select
         if response['choice'] == '1':
             if response['choice1'] != 'b':            
@@ -26,12 +23,12 @@ if __name__ == "__main__":
                 insert_rows(response['choice1'], response['data'])
             response = main_menu()            
         elif response['choice'] == '3':
-            update_row(response)
+            if response['choice1'] != 'b':
+                update_row(response)
             response = main_menu()
         elif response['choice'] == '4':
-            delete_row(response)
-            response = main_menu()
-        elif response['choice'] == '5':
+            if response['choice1'] != 'b':
+                delete_row(response)
             response = main_menu()
         elif response['choice'] == 'q':
             print("\nGoodbye.")

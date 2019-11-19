@@ -19,7 +19,6 @@ def update_row(request_object):
 
         sql = f"UPDATE troop SET troop_name = '{name}', troop_address = '{address}'," \
             f"troop_website = '{website}', troop_telephone_number = '{phone}' WHERE troop_name = '{target_id}';"
-        print(sql)
     elif (table == "section"):
 
         name = data["name"]
@@ -30,7 +29,7 @@ def update_row(request_object):
 
         sql = f"UPDATE section SET section_name = '{name}', section_type = '{section_type}'," \
             f"meeting_day = '{meeting_day}', meeting_start_time = '{start_time}', meeting_end_time = '{end_time}' WHERE section_name = '{target_id}';"
-        print(sql)
+        
     cursor.execute(sql)
 
     conn.commit()

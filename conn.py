@@ -11,10 +11,9 @@ def connect_to_db():
             host='localhost',
             user='phpmyadmin',
             passwd='123',
-            db='db_design_project2'
+            db='test_inserts'
         )
         
-        print("CONNECTED")
         return connection
     except:
 
