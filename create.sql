@@ -38,10 +38,9 @@ CREATE TABLE IF NOT EXISTS volunteer(
     volunteer_id VARCHAR(50) PRIMARY KEY,
     volunteer_name VARCHAR (15) NOT NULL,
     volunteer_address VARCHAR (25) NOT NULL,
-    volunteer_phone_number VARCHAR (12) NOT NULL ,
+    volunteer_phone_number VARCHAR (12) NOT NULL,
     date_of_birth DATE,
     volunteer_gender VARCHAR (15),
-    parent_guardian VARCHAR (50) NOT NULL,
     vetting_completion_date DATE NOT NULL,
     troop_name VARCHAR(50),
     FOREIGN KEY (troop_name) REFERENCES troop(troop_name)
@@ -58,8 +57,7 @@ CREATE TABLE IF NOT EXISTS section(
     FOREIGN KEY (volunteer_id) REFERENCES volunteer(volunteer_id),
     troop_name VARCHAR(50),
     FOREIGN KEY (troop_name) REFERENCES troop(troop_name),
-    section_type_code VARCHAR(50),
-    FOREIGN KEY (section_type_code) REFERENCES section_type(code)
+    FOREIGN KEY (section_type) REFERENCES section_type(code)
 );
 
 CREATE TABLE IF NOT EXISTS member(
