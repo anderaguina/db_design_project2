@@ -54,11 +54,14 @@ def main_menu():
 
 
 def select_menu():
-    print("\n[1] LIST TROOP DATA")
-    print("\n[2] LIST SECTION DATA")
-    print("\n[3] LIST YOUTH MEMBER DATA")
-    print("\n[4] LIST ADULT VOLUNTEER DATA")
-    print("\n[5] LIST NATIONAL EVENTS DATA")
+    print("\n[1] LIST TROOPS")
+    print("\n[2] LIST SECTIONS")
+    print("\n[3] LIST YOUTH MEMBERS")
+    print("\n[4] LIST ADULT VOLUNTEERS")
+    print("\n[5] LIST NATIONAL EVENTS")
+    print("\n[6] LIST SECTION TYPES")
+    print("\n[7] LIST MEMBERS ATTENDING NATIONAL EVENTS")
+    print("\n[8] LIST NATIONAL EVENTS ORGANIZED FOR SECTION TYPES")
     
     print("[b] Enter b to go back to main menu.")
 
