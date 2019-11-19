@@ -12,8 +12,8 @@ def insert_rows(choice, data):
             f"VALUES ('{data['name']}', '{data['address']}', '{data['website']}', '{data['phone']}');"
         print(sql)
     elif (table == "section"):
-        sql = f"INSERT INTO section (section_name, section_type, meeting_day, meeting_start_time, meeting_end_time)" \
-            f"VALUES ('{data['name']}', '{data['section_type']}', '{data['meeting_day']}', '{data['start_time']}', '{data['end_time']}');"
+        sql = f"INSERT INTO section (section_name, section_type, meeting_day, meeting_start_time, meeting_end_time, volunteer_id, troop_name)" \
+            f"VALUES ('{data['name']}', '{data['section_type']}', '{data['meeting_day']}', '{data['start_time']}', '{data['end_time']}', '{data['volunteer_id']}', '{data['troop_name']}');"
         print(sql)
     cursor.execute(sql)
 

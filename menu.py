@@ -113,10 +113,10 @@ def request_target_entry():
 
 
 def request_troop_data():
-    name = input("\nName of the troop? ")
-    address = input("\nAddress of the troop? ")
-    website = input("\nWebsite of the troop? ")
-    phone = input("\nPhone number of the troop? ")
+    name = input("\nEnter name of the troop: ")
+    address = input("\nEnter address of the troop: ")
+    website = input("\nEnter website of the troop: ")
+    phone = input("\nEnter phone number of the troop: ")
 
     troop = {
         "name": name,
@@ -128,18 +128,22 @@ def request_troop_data():
     return troop
 
 def request_section_data():
-    name = input("\nName of the section? ")
-    section_type = input("\nSection type? ")
-    meeting_day = input("\nEnter meeting day ")
-    start_time = input("\nEnter meeting start time ")
-    end_time = input("\nEnter meeting ending time ")
+    name = input("\nEnter name of the section: ")
+    section_type = input("\nEnter section type: ")
+    meeting_day = input("\nEnter meeting day: ")
+    start_time = input("\nEnter meeting start time: ")
+    end_time = input("\nEnter meeting ending time: ")
+    volunteer = input("\nEnter volunteer id of the section leader: ")
+    troop = input("\nEnter name of troop to which the section will belong: ")
 
     section = {
         "name": name,
         "section_type": section_type,
         "meeting_day": meeting_day,
         "start_time": start_time,
-        "end_time": end_time
+        "end_time": end_time,
+        "volunteer_id": volunteer,
+        "troop_name": troop
     }
 
     return section
