@@ -104,6 +104,9 @@ def update_menu():
 
     elif choice == '2':
         data = request_section_data()
+    else:
+        print("\nI don't understand that choice, please try again.\n")
+        update_menu()
 
     return choice, id_entry, data
 
