@@ -11,7 +11,7 @@ def connect_to_db():
             host='localhost',
             user='phpmyadmin',
             passwd='123',
-            db='test_inserts'
+            db='demo'
         )
         
         return connection
