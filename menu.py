@@ -174,6 +174,14 @@ def request_troop_data():
     website = input("\nEnter website of the troop: ")
     phone = input("\nEnter phone number of the troop: ")
 
+    print(phone.isdigit())
+    print("\n")
+    print(phone.isdigit())
+
+    if (not phone.isdigit()):
+        print("Only numbers accepted for phone numbers")
+        request_troop_data()
+
     troop = {
         "name": name,
         "address": address,
